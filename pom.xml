@@ -9,22 +9,7 @@
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<finalName>onlinebookstore</finalName>
-		name: Build and analyze
-        env:
-          SONAR_TOKEN: ${{ a5393e58312e14d07d2e915e46090147aa7ede9a }}
-        run: mvn verify sonar:sonar \
-          -Dsonar.host.url=https://sonarcloud.io /project/configuration/AzurePipe?id=tribhuvanab3b0442_Sonar_Java_Project
-          -Dsonar.organization=<Sonar_project> \
-          -Dsonar.projectKey=<Sonar_java_project>
-		<settings>
-  ...
-  <pluginGroups>
-    <pluginGroup>
-      org.sonarsource.scanner.maven
-    </pluginGroup>
-  </pluginGroups>
-  ...
-</settings>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -89,3 +74,19 @@
 		</dependency>
 	</dependencies>
 </project>
+		name: Build and analyze
+        env:
+          SONAR_TOKEN: ${{ a5393e58312e14d07d2e915e46090147aa7ede9a }}
+        run: mvn verify sonar:sonar \
+          -Dsonar.host.url=https://sonarcloud.io /project/configuration/AzurePipe?id=tribhuvanab3b0442_Sonar_Java_Project
+          -Dsonar.organization=<Sonar_project> \
+          -Dsonar.projectKey=<Sonar_java_project>
+		<settings>
+  ...
+  <pluginGroups>
+    <pluginGroup>
+      org.sonarsource.scanner.maven
+    </pluginGroup>
+  </pluginGroups>
+  ...
+</settings>
